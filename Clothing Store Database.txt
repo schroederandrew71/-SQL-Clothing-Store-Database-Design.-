@@ -1,0 +1,20 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, size TEXT, price INTEGER, quantity INTEGER, aisel INTEGER);
+INSERT INTO store VALUES (1, "shorty shorts", "small", 11.99, 7, 9);
+INSERT INTO store VALUES (2, "shorty shorts", "medium", 11.99, 12, 9);
+INSERT INTO store VALUES (3, "T Shirts", "small", 19.99, 1, 2);
+INSERT INTO store VALUES (4, "Boxers", "large", 14.99, 32, 3);
+INSERT INTO store VALUES (5, "flip flops", "medium", 9.99, 3, 9);
+INSERT INTO store VALUES (6, "T Shirts", "medium", 19.99, 3, 2);
+INSERT INTO store VALUES (7, "T Shirts", "large", 19.99, 11, 2);
+INSERT INTO store VALUES (8, "T Shirts", "xlarge", 19.99, 4, 2);
+INSERT INTO store VALUES (9, "Turntle neck", "medium", 24.99, 7, 2);
+INSERT INTO store VALUES (10, "Bracelet", "one size fit all", 9, 31, 1);
+INSERT INTO store VALUES (11, "Thongs", "small", 5, 22, 4);
+INSERT INTO store VALUES (12, "Shoes", "medium", 50, 6, 9);
+INSERT INTO store VALUES (13, "Neckties", "small", 3, 2, 2);
+INSERT INTO store VALUES (14, "Turtle neck", "large", 24.99, 7, 2);
+INSERT INTO store VALUES (15, "Hoodies", "xlarge", 50, 6, 5);
+
+SELECT * FROM store GROUP BY price;
+
+SELECT name, AVG(price) FROM store GROUP BY name
